@@ -21,7 +21,7 @@
         display: none;
     }
     </style>
-    <title>webSocket测试</title>
+    <title>webSocket聊天室测试</title>
 </head>
 
 <body>
@@ -70,7 +70,7 @@
                     "/webSocketServer/" + userName);
             }
             websocket.onopen = function(evnt) {
-                $("#tou").html("链接服务器成功!")
+                $("#tou").html("连接服务器成功!")
                 $("#send").prop("disabled", "");
                 $("#connection-btn").prop("disabled", "disabled");
                 $("#logout").show();
@@ -82,7 +82,7 @@
                 $("#tou").html("报错!")
             };
             websocket.onclose = function(evnt) {
-                $("#tou").html("与服务器断开了链接!");
+                $("#tou").html("与服务器断开了连接!");
                 $("#send").prop("disabled", "disabled");
                 $("#connection-btn").prop("disabled", "");
                 $("#logout").hide();
