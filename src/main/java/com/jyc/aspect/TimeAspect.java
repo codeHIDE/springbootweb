@@ -17,7 +17,6 @@ public class TimeAspect {
         for (Object arg : args) {
             System.out.println("参数为:" + arg);
         }
-
         long start = System.currentTimeMillis();
 
         Object object = pjp.proceed();
@@ -26,4 +25,5 @@ public class TimeAspect {
 
         return object;
     }
+    
 }
